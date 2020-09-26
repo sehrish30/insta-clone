@@ -1,0 +1,459 @@
+a{
+   color: #e23e57 !important ;
+   font-family: 'Padauk', sans-serif;
+   font-size: 1.2rem !important;
+}
+
+.sidenav{
+    background-color: #311d3f !important;
+    padding-top: 4rem;
+}
+
+.navbar{
+    background-color: #311d3f;
+    padding: 0 5rem;
+}
+/* 
+a:hover{
+    background-color:#522546!important;
+} */
+
+.navbar__logo{
+   font-family: 'Cookie', cursive;
+   font-size: 1.8rem !important;
+}
+
+.nav__btn{
+    margin-left: 18px!important;
+}
+
+#toast-container{
+    top: 30px !important;
+    right: 20px !important;
+    left: auto !important;
+}
+
+.active{
+    background-color: #522546
+}
+
+/*---------------------------------------
+            Login
+------------------------------------------*/
+.mycard__auth{
+    padding:20px;
+    text-align: center;
+    max-width: 400px;
+    margin: 10px auto;
+    background-color: #f8efd4;
+    transition: box-shadow 0.3s ease-out;
+    box-shadow: -6px -6px 20px rgba(255, 255, 255,1),
+                 6px 6px 20px rgba(0, 0, 0, 0.1)
+}
+
+.mycard__auth:hover{
+    box-shadow: inset -6px -6px 10px rgba(255, 255, 255, 0.5),
+                inset 6px 6px 20px rgba(0, 0,0, 0.05);
+}
+
+.mycard{
+    margin-top: 30px;
+    font-family: 'Padauk', sans-serif;
+}
+
+.mycard__header{
+   font-family: 'Cookie', cursive;
+   color: #311d3f
+}
+
+.input-field input[type=email]{
+    color: #355c7d!important;
+    font-family: 'Padauk', sans-serif; 
+    font-size: 1.3rem;
+}
+
+.input-field input[type=text]{
+    color: #355c7d!important;
+    font-family: 'Padauk', sans-serif; 
+    font-size: 1.3rem;
+}
+
+.input-field input[type=password]{
+    color: #355c7d!important;
+    font-family: 'Padauk', sans-serif; 
+    font-size: 1.3rem;
+}
+
+.input-field input[type=email]:focus {
+    border-bottom: 1px solid #355c7d !important;
+    box-shadow: 0 1px 0 0 #355c7d !important;
+  }
+  .input-field input[type=password]:focus {
+    border-bottom: 1px solid  #355c7d !important;
+    box-shadow: 0 1px 0 0  #355c7d !important;
+  } 
+  
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid  #355c7d !important;
+    box-shadow: 0 1px 0 0  #355c7d !important;
+  }   
+  
+  .input-field input[type=file]:focus {
+    border-bottom: 1px solid  #355c7d !important;
+    box-shadow: 0 1px 0 0  #355c7d !important;
+  }  
+
+.mycard__btn, .mycard__btn:focus{
+    margin-top: 16px;
+    box-shadow: -4px -4px 15px rgba( 255, 255, 255,1),
+                4px 4px 15px rgba(0, 0, 0, 0.1) !important;
+    background-color:   transparent;
+    color: #e23e57;
+    font-family: 'Padauk', sans-serif;   
+    font-size: 1.2rem !important;
+    transition: box-shadow 0.3s ease-out;
+}  
+
+.mycard__btn:hover{
+    box-shadow: inset -4px -4px 15px rgba( 255, 255, 255,0.5),
+                inset 4px 4px 15px rgba(0, 0, 0, 0.1) !important;
+    background-color:   transparent;            
+}
+
+/*---------------------------------------
+            Profile
+------------------------------------------*/
+
+.profile{
+    max-width:550px;
+    margin: 0px auto;
+}
+
+.profile__container{
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: space-around;
+    margin: 18px 0;
+    color: #4c4c4d;
+    border-radius: 23px;
+    box-shadow: 
+    12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    /* box-shadow: inset -4px -4px 15px rgba( 255, 255, 255,0.5),
+    inset 4px 4px 15px rgba(0, 0, 0, 0.1) !important; */
+}
+
+.profile__details{
+    margin: 0 4px;
+}
+
+.profile__dp{
+    width: 150px;
+    height: 150px;
+    border-radius: 80px;
+    object-fit: cover;
+    margin: 16px 0;
+    border: 5px solid #FEDFE0;
+    border-radius: 150px;
+    background: #FEDFE0;
+    box-shadow:  5px 5px 10px #bca5a6, 
+                 -5px -5px 10px #ffffff;
+}
+
+
+
+@media (max-width: 700px){
+    .profile__dp{
+        width: 90px;
+        height: 90px;
+    }
+}
+.profile__infoSection{
+    display: flex;
+    justify-content: space-between;
+    width: 108%;
+}
+
+.profile__gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-shadow:  5px 5px 10px #a6a6a4, 
+             -5px -5px 10px #a6a6a4;
+    /* box-shadow: 
+    12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3); */
+}
+
+.profile__galleryimage{
+   width: 30%;
+   height: 25vh;
+   object-fit: cover;
+   margin: 0 0.5rem;
+}
+
+@media (max-width: 600px){
+    .profile__galleryimage{
+        width: 40%;
+        height: 25vh;
+     }
+}
+
+/*---------------------------------------
+            Home card
+------------------------------------------*/
+
+.home__card{
+    max-width: 500px;
+    height: max-content;
+    margin: 26px auto;
+    padding: 1.5rem;
+    background-color: #f8efd4;
+    box-shadow: inset -6px -6px 10px rgba(255, 255, 255, 0.5),
+    inset 6px 6px 20px rgba(0, 0,0, 0.05);
+    
+}
+
+.profile__dpofPost{
+    width: 35px;
+    height: 35px;
+    border-radius: 80px;
+    object-fit: cover;
+    margin: 16px 0;
+    border-radius: 150px;
+    background: #FEDFE0;
+    margin-right:10px;
+    box-shadow:  5px 5px 10px #bca5a6, 
+                 -5px -5px 10px #ffffff;
+}
+
+.topdp{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative; 
+    flex: 0.1 0.7 0.3;
+    width: 100%;
+}
+
+.topdp>.home__PostedBy>.profile__Name{
+    flex: 0.9;
+    position: absolute;
+    margin:1.5rem 1rem;
+}
+
+.home__PostedBy{
+ color: #355c7d;
+ font-weight: bold;
+ display: flex;
+ flex: 0.1 0.7 0.2;
+ justify-content: space-around;
+}
+
+
+.home__Image{
+    box-shadow: -6px -6px 10px rgba(192, 108, 132, 0.3),
+     6px 6px 20px rgba(0, 0,0, 0.05);
+}
+
+.home__cardTitle{
+    color: #522546;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    box-shadow: inset -6px -6px 10px rgba(255, 255, 255, 0.5),
+    inset 6px 6px 20px rgba(0, 0,0, 0.05);
+}
+
+.home__carddesc{
+    color: #355c7d;
+    font-size: 1rem;
+    padding: .5rem;   
+}
+
+.home_btn{
+    color: #ff414d;
+    border-radius: 50%;
+    background: #f8efd4;
+    box-shadow:  6px 6px 12px #aea794, 
+                -6px -6px 12px #ffffff;
+    padding: 0.5rem;   
+    margin: 0 0.5rem;  
+    cursor: pointer;        
+}
+
+.post_delbtn{
+    color: #c06c84;
+    border-radius: 50%;
+    background: #f8efd4;
+    box-shadow:  6px 6px 12px #aea794, 
+                -6px -6px 12px #ffffff;
+    padding: 0.5rem;   
+    margin: 0 0.5rem;  
+    cursor: pointer;
+    position: absolute;
+    margin: 90%;
+}
+
+.home_delbtn{
+    color: #c06c84;
+    border-radius: 50%;
+    background: #f8efd4;
+    box-shadow:  6px 6px 12px #aea794, 
+                -6px -6px 12px #ffffff;
+    padding: 0.5rem;   
+    margin: 0 0.5rem;  
+    cursor: pointer;
+  
+    position: absolute;
+    margin-left: 70%;
+}
+
+.home_postLikes{
+    color: #88304e;
+}
+
+input[type=text]{
+    color: #355c7d!important;
+    font-family: 'Padauk', sans-serif; 
+    font-size: 1.3rem;
+}
+
+input[type=text]:focus {
+    border-bottom: 1px solid  #355c7d !important;
+    box-shadow: 0 1px 0 0  #355c7d !important;
+  }   
+
+.home__commentsTitle{
+    font-weight: 500;
+    color: #6c5b7b;
+    font-size: 1.2rem;
+}  
+
+.home__commentsname, .home__commentsdesc{
+    padding-right: 5px;
+    color: #522546;
+    font-size: 1rem;
+}
+
+.card .card-content{
+    padding: 15px !important;
+}
+
+
+/*---------------------------------------
+            Create Post
+------------------------------------------*/  
+
+.createPost{
+    margin: 40px auto;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f8efd4;
+    box-shadow: inset -6px -6px 10px rgba(255, 255, 255, 0.5),
+    inset 6px 6px 20px rgba(0, 0,0, 0.05);
+}
+
+input[type=file]{
+    color: #355c7d!important;
+    font-family: 'Padauk', sans-serif; 
+    font-size: 1.3rem;
+}
+
+input[type=file]:focus, .file-path:focus {
+    border-bottom: 1px solid  #355c7d !important;
+    box-shadow: 0 1px 0 0  #355c7d !important;
+  }  
+
+/*---------------------------------------
+            User profile
+------------------------------------------*/ 
+
+.loader{
+    align-items: center;
+    justify-content: center;
+    margin:10rem 50%;
+}
+
+.follow__btn, .follow__btn:focus{
+    margin-top: 16px;
+    border-radius: 0px;
+    box-shadow:  -10px -10px 15px rgba(255, 255, 255, 0.5), 
+                  10px 10px 15px rgba(70, 70,70, 0.12);
+    background-color:   transparent;
+    color: #e23e57;
+    font-family: 'Padauk', sans-serif;   
+    font-size: 1.2rem !important;
+    transition: box-shadow 0.3s ease-out;
+    margin-bottom: 1rem;
+    outline: none;
+    font-weight: bold;
+    border: 2px solid #FEE7EC
+}  
+
+.follow__btn:hover{
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 
+                 10px 10px 15px rgba(70, 70,70, 0.12),
+                 inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+                 inset 10px 10px 15px rgba(70, 70, 70, 0.12)!important;
+
+    background-color:   transparent;            
+}
+
+.editbtn{
+    color: #c06c84;
+    border-radius: 50%;
+    background: #f8efd4;
+    box-shadow:  6px 6px 12px #aea794, 
+                -6px -6px 12px #ffffff;
+    padding: 0.5rem;  
+    height: 2rem; 
+    margin: 0 0.5rem;  
+    cursor: pointer;
+    position: relative;
+    margin-left: -20%;
+    margin-top: 45px;
+}
+
+@media (max-width: 700px){
+    .editbtn{
+        margin-left: -25%;
+    }
+}
+
+@media (max-width: 500px){
+    .editbtn{
+        margin-left: -20%;
+    }
+}
+
+@media (max-width: 450px){
+    .editbtn{
+        margin-left: -15%;
+    }
+}
+
+@media (max-width: 400px){
+    .editbtn{
+        margin-left: -14%;
+    }
+}
+
+@media (max-width: 350px){
+    .editbtn{
+        margin-left: -4%;
+    }
+}
+
+/*---------------------------------------
+            Modal
+------------------------------------------*/ 
+
+
+.modal, .modal-footer{
+    background-color: #e23e57!important;
+}
+
+.modelfooter-close, .modelfooter-close:focus{
+   color: #f8efd4!important;
+}
