@@ -51,7 +51,6 @@ const Profile = () => {
 
      useEffect(()=>{
         M.Modal.init(editmodal.current);
-        console.log("Helloe");
      })
 
     const updatePhoto = (file) =>{

@@ -21,7 +21,7 @@ const Home = () => {
             // console.log("Iam result",result.posts);
         
             setData(result.posts); 
-            console.log("Iam data",data);
+            // console.log("Iam data",data);
         } )
     }, [])
 
