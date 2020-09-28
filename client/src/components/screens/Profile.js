@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useContext} from 'react'
+import React, {useEffect, useState, useContext, useRef} from 'react'
 import {UserContext} from '../../App'
 import M from "materialize-css"
 import Loader from 'react-loader-spinner'
@@ -6,10 +6,11 @@ import Loader from 'react-loader-spinner'
 
 const Profile = () => {
 
-    const [myPosts, setMyPosts] = useState([])
+    const [myPosts, setMyPosts] = useState(null)
     const [image, setImage] = useState("");
     // const [url, setUrl] = useState(undefined);
     const {state, dispatch} = useContext(UserContext)
+    const editmodal = useRef(null);
 
     useEffect(()=>{
         if(image){
@@ -48,14 +49,18 @@ const Profile = () => {
         }
      },[image])
 
+     useEffect(()=>{
+        M.Modal.init(editmodal.current);
+        console.log("Helloe");
+     })
+
     const updatePhoto = (file) =>{
         setImage(file)
     }
 
-    function openmodal() {
-        let elems = document.querySelectorAll('.modal');
-        let instances = M.Modal.init(elems);
-        console.log("open")
+      const uploadPhoto = (e) =>{
+        updatePhoto(e.target.files[0]);
+        M.Modal.getInstance(editmodal.current).close()
       }
   
     
@@ -88,26 +93,26 @@ const Profile = () => {
         
         (<div className="profile">
             <div className="profile__container">
-                {console.log("Myposts",myPosts)}
+                {/* {console.log("Myposts",myPosts)} */}
 
                 <img className="profile__dp" alt="profile dp" src={state? state.dp:""}/>
-                <i onClick={openmodal()} className="tiny material-icons editbtn home_icon modal-trigger" href="#modal1" data-target="modal1"
+                <i  className="tiny material-icons editbtn home_icon modal-trigger"  href="#modal1" data-target="modal1"
                 //   onClick={()=> updatePhoto()}
                         >create</i>
                  {/* <!-- Modal Structure --> */}
-                    <div id="modal1" className="modal">
+                    <div ref={editmodal} id="modal1" className="modal">
                         <div className="modal-content">
                         <div className="file-field input-field">
                         <div className="btn #d1c4e9 deep-purple lighten-4">
                             <span>Upload Dp</span>
-                            <input type="file" onChange={(e)=>updatePhoto(e.target.files[0])} />
+                            <input type="file" onChange={(e)=>uploadPhoto(e)} />
                         </div>
                         <div className="file-path-wrapper">
                             <input className="file-path validate"  type="text"/>
                         </div>
                     </div>
                     <div class="modal-footer">
-                    <a href="/profile" className="modal-close waves-effect  btn-flat modelfooter-close">Close</a>
+                    <button href="" className="modal-close waves-effect  btn-flat modelfooter-close">Close</button>
                     </div>
                         </div>
                     </div>  
@@ -144,9 +149,9 @@ const Profile = () => {
 export default Profile
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    let elems = document.querySelectorAll('.modal');
-    let instances = M.Modal.init(elems);
-  });
+// document.addEventListener('DOMContentLoaded', function() {
+//     let elems = document.querySelectorAll('.modal');
+//     let instances = M.Modal.init(elems);
+//   });
 
   

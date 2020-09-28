@@ -162,7 +162,7 @@ const Home = () => {
                    
                         <Link className="profile__Name" to={item.postedBy._id !== state._id?`/profile/${item.postedBy._id}`: `/profile`}>{item.postedBy.name}</Link>
                         {item.postedBy._id === state._id && (
-                       <i class="tiny material-icons post_delbtn home_icon"
+                       <i className="tiny material-icons post_delbtn home_icon"
                        onClick={()=> deletePost(item._id)}
                        >delete_forever</i>
                     )}

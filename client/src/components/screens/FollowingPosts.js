@@ -153,14 +153,21 @@ const FollowingPosts = () => {
         <div className="home">
             {data.map(item => {
                 return(
-                 <div className="card home__card" key={item._id}>
+                    <div className="card home__card" key={item._id}>
+                    
                     <h5 className="home__PostedBy">
-                        <Link to={item.postedBy._id !== state._id?`/profile/${item.postedBy._id}`: `/profile`}>{item.postedBy.name}</Link>
-                    {item.postedBy._id === state._id && (
-                       <i class="tiny material-icons home_delbtn home_icon"
+                    <div className="topdp">     
+                     <img className="profile__dpofPost" alt="profile dp" src={item.postedBy.dp}/> 
+                   
+                        <Link className="profile__Name" to={item.postedBy._id !== state._id?`/profile/${item.postedBy._id}`: `/profile`}>{item.postedBy.name}</Link>
+                        {item.postedBy._id === state._id && (
+                       <i class="tiny material-icons post_delbtn home_icon"
                        onClick={()=> deletePost(item._id)}
                        >delete_forever</i>
                     )}
+
+                     </div>      
+                   
                     </h5>
                    
                     <div className="card-image home__cardImage">

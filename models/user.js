@@ -25,7 +25,9 @@ const userSchema = new mongoose.Schema({
     following: [{
         type: ObjectId,
         ref: "User"
-    }]
+    }],
+    resetToken: String,
+    expireToken: Date
 })
 
 mongoose.model("User", userSchema);

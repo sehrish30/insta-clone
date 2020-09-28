@@ -66,16 +66,6 @@ router.put('/unfollow', requireLogin, (req, res)=>{
     }))
 })
 
-// router.put('/updatepic',requireLogin,(req,res)=>{
-//     User.findByIdAndUpdate(req.user._id,{$set:{dp:req.body.dp}},{new:true},
-//         (err,result)=>{
-//          if(err){
-//              return res.status(422).json({error:"pic canot post"})
-//          }
-//          res.json(result)
-//     })
-// })
-
 router.put('/updatepic',requireLogin, (req,res)=>{
     User.findByIdAndUpdate(req.user._id, {
         $set: {dp: req.body.dp}
@@ -88,6 +78,17 @@ router.put('/updatepic',requireLogin, (req,res)=>{
       }  
       res.json(result);
     })
+})
+
+router.post('/search-users', (req, res)=>{
+    let userPattern = new RegExp("^"+req.body.query)
+    User.find({email: {$regex: userPattern}})
+      .select("_id email dp")
+      .then(user =>{
+          res.json({user})
+      }).catch(err => {
+          console.log(err);
+      })
 })
 
 

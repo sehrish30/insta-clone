@@ -37,6 +37,12 @@ a:hover{
     background-color: #522546
 }
 
+.searchbtn{
+    color: #1abb9c;
+    padding: 0 2rem;
+    cursor: pointer;
+}
+
 /*---------------------------------------
             Login
 ------------------------------------------*/
@@ -118,6 +124,14 @@ a:hover{
     box-shadow: inset -4px -4px 15px rgba( 255, 255, 255,0.5),
                 inset 4px 4px 15px rgba(0, 0, 0, 0.1) !important;
     background-color:   transparent;            
+}
+
+.forgotPw{
+    color: #ff9999!important;
+   
+}
+.forgotPw:hover{
+    text-decoration: underline;
 }
 
 /*---------------------------------------
@@ -400,7 +414,7 @@ input[type=file]:focus, .file-path:focus {
     background-color:   transparent;            
 }
 
-.editbtn{
+.editbtn, .editbtn:focus{
     color: #c06c84;
     border-radius: 50%;
     background: #f8efd4;
@@ -413,6 +427,7 @@ input[type=file]:focus, .file-path:focus {
     position: relative;
     margin-left: -20%;
     margin-top: 45px;
+    outline:none;
 }
 
 @media (max-width: 700px){
@@ -456,4 +471,58 @@ input[type=file]:focus, .file-path:focus {
 
 .modelfooter-close, .modelfooter-close:focus{
    color: #f8efd4!important;
+}
+
+/*---------------------------------------
+           Search Modal
+------------------------------------------*/
+
+.searchModal{
+    background-color: #f67280!important;
+    color: white;
+}
+
+#inputSearch, #inputSearch:focus{
+    color: white!important;
+    border-radius: 30px!important;
+background: #f67280!important;
+box-shadow: inset 5px 5px 10px #cf606c, 
+            inset -5px -5px 10px #ff8494!important;
+     border: none!important;
+     padding: 0 0.5rem;     
+     outline:none;      
+}
+
+#users__collection, .collection-item{
+    color: #ffffff!important;
+    border-radius: 0px;
+    background: linear-gradient(145deg, #dd6773, #ff7a89);
+    box-shadow:  15px 15px 30px #d4626e, 
+                 -15px -15px 30px #ff8292;
+    border: none!important;             
+}
+
+li{
+    list-style-type: none;
+}
+
+.users_name{
+    padding-top:1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+
+}
+
+.collection-item{
+    padding-top:1.4rem !important;
+    cursor: pointer;
+}
+
+.searchModal__footer{
+    background: #f67280!important;
+}
+
+.close-btn, .close-btn:focus, .close-btn:focus:hover{
+    color: white!important;
+    margin-bottom: 2rem!important;
 }

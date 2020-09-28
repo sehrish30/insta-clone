@@ -10,6 +10,8 @@ import UserProfile from './components/screens/UserProfile';
 import CreatePost from './components/screens/CreatePost';
 import {reducer, initialState} from './reducers/userReducer'
 import FollowingPosts from './components/screens/FollowingPosts';
+import Reset from './components/screens/Reset';
+import Newpassword from './components/screens/Newpassword';
 
 export const UserContext = createContext();
 
@@ -25,7 +27,9 @@ const Routing = () => {
     if(user){
       dispatch({type: "USER", payload: user})
     }else{
-      history.push("/signin");
+       if(!history.location.pathname.startsWith('/reset')){
+        history.push("/signin");
+       }
     }
   }, [])  
 
@@ -53,6 +57,12 @@ const Routing = () => {
       </Route>
       <Route path="/followingposts">
         <FollowingPosts />
+      </Route>
+      <Route exact path="/reset">
+        <Reset/>
+      </Route>
+      <Route path="/reset/:token">
+        <Newpassword/>
       </Route>
      </Switch>
     
