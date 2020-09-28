@@ -7,7 +7,7 @@ import Loader from 'react-loader-spinner'
 
 const Home = () => {
 
-    const [data, setData] = useState(null);
+    const [data, setData] = useState([]);
     const {state, dispatch} = useContext(UserContext);
 
 
@@ -18,8 +18,10 @@ const Home = () => {
           }
       }).then(res=> res.json())
         .then(result => {   
-            // console.log(result);
+            // console.log("Iam result",result.posts);
+        
             setData(result.posts); 
+            console.log("Iam data",data);
         } )
     }, [])
 
@@ -141,7 +143,7 @@ const Home = () => {
     return (
        <> 
        {
-          !data?(
+          data.length===0?(
             <Loader
             className="loader"
             type="Grid"

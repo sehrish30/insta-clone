@@ -38,6 +38,7 @@ const CreatePost = () => {
           }
         }).catch(err => {
           console.log(err);
+          setDisable(false)
         }) 
       } 
     }, [url])
@@ -60,9 +61,11 @@ const CreatePost = () => {
          .then(res => res.json())
          .then(data => {
             setUrl(data.secure_url);
+            setDisable(false)
          })
          .catch(err => {
              console.log(err);
+             setDisable(false);
          })
 
         
