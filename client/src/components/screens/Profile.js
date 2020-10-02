@@ -32,7 +32,7 @@ const Profile = () => {
                     "Authorization":"Bearer "+localStorage.getItem("jwt")
                 },
                 body:JSON.stringify({
-                    dp:data.url
+                    dp:data.secure_url
                 })
             }).then(res=>res.json())
             .then(result=>{
